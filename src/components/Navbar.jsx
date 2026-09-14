@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode}`}>
-        <a className="navbar-brand" href="#">{props.title}</a>
+        <h4 className="navbar-brand" >{props.title}</h4>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -12,10 +12,10 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
+              <Link className="nav-link" to="/TextUtils">Home <span className="sr-only">(current)</span></Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">About</Link>
+              <Link className="nav-link" to="/TextUtils/about">About</Link>
             </li>
             {/* <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
