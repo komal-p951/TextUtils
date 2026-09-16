@@ -17,24 +17,14 @@ export default function Navbar(props) {
             <li className="nav-item">
               <Link className="nav-link" to="/TextUtils/about">About</Link>
             </li>
-            {/* <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <div className="dropdown-menu">
-                <a className="dropdown-item" href="#">Action</a>
-                <a className="dropdown-item" href="#">Another action</a>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li> */}
-            {/* <li className="nav-item">
-              <a className="nav-link disabled">Disabled</a>
-            </li> */}
           </ul>
-          <div className={`custom-control custom-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
-            <input type="checkbox" className="custom-control-input" onClick={props.toggleMode} id="customSwitch1" />
-            <label className="custom-control-label" htmlFor="customSwitch1">Enable dark mode</label>
+          <div className="d-flex">
+            <div className='bg-dark rounded mx-2' style={{height:'30px' , width:'30px', cursor:'pointer', border:'1px solid'}} onClick={() => props.toggleMode('dark')}></div>
+            <div className='bg-light rounded mx-2' style={{height:'30px' , width:'30px', cursor:'pointer', border:'1px solid'}} onClick={() => props.toggleMode('light')}></div>
+            <div className='bg-primary rounded mx-2' style={{height:'30px' , width:'30px', cursor:'pointer', border:'1px solid'}} onClick={() => props.toggleMode('primary')}></div>
+            <div className='bg-danger rounded mx-2' style={{height:'30px' , width:'30px', cursor:'pointer', border:'1px solid'}} onClick={() => props.toggleMode('danger')}></div>
+            <div className='bg-success rounded mx-2' style={{height:'30px' , width:'30px', cursor:'pointer', border:'1px solid'}} onClick={() => props.toggleMode('success')}></div>
+            <div className='bg-warning rounded mx-2' style={{height:'30px' , width:'30px', cursor:'pointer', border:'1px solid'}} onClick={() => props.toggleMode('warning')}></div>
           </div>
         </div>
         

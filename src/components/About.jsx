@@ -1,29 +1,16 @@
 import React, { useState } from "react";
 
 export default function About(props) {
-    // const [mystyle,setMystyle] = useState({
-    //     color:'white',
-    //     backgroundColor:'black'
-    // })
-    // let toggleStyle = () => {
-    //     if(mystyle.color == 'white'){
-    //         setMystyle({
-    //             color:'black',
-    //             backgroundColor:'white'
-    //         })
-    //     }else{
-    //         setMystyle({
-    //             color:'white',
-    //             backgroundColor:'black'
-    //         })
-    //     }
-    // }
+    let mystyle = {
+      color: props.mode === 'dark' ? 'white' : '#042743',
+      backgroundColor: props.mode === 'dark' ? 'rgb(36 74 104)' : 'white',
+    }
   return (
     <div className="container" >
     <h1 className="my-3"> About us</h1>
-      <div className="accordion"  style={{color: props.mode === 'dark' ? 'white' : 'black'}} id="accordionExample">
+      <div className="accordion"  style={{color: props.mode === 'dark' ? 'white' : '#042743'}} id="accordionExample">
         <div className="card">
-          <div className="card-header" id="headingOne">
+          <div className="card-header" id="headingOne" style={mystyle}>
             <h2 className="mb-0">
               <button
                 className="btn btn-link btn-block text-left "
@@ -32,7 +19,7 @@ export default function About(props) {
                 data-target="#collapseOne"
                 aria-expanded="true"
                 aria-controls="collapseOne"
-                // style={mystyle}
+                style={mystyle}
               >
                 Collapsible Group Item #1
               </button>
@@ -43,7 +30,7 @@ export default function About(props) {
             id="collapseOne"
             className="collapse show"
             aria-labelledby="headingOne"
-            // style={mystyle}
+            style={mystyle}
             data-parent="#accordionExample"
           >
             <div className="card-body">
@@ -53,7 +40,7 @@ export default function About(props) {
           </div>
         </div>
         <div className="card">
-          <div className="card-header" id="headingTwo" >
+          <div className="card-header" id="headingTwo" style={mystyle}>
             <h2 className="mb-0">
               <button
                 className="btn btn-link btn-block text-left collapsed"
@@ -62,7 +49,7 @@ export default function About(props) {
                 data-target="#collapseTwo"
                 aria-expanded="false"
                 aria-controls="collapseTwo"
-                // style={mystyle}
+                style={mystyle}
               >
                 Collapsible Group Item #2
               </button>
@@ -73,7 +60,7 @@ export default function About(props) {
             className="collapse"
             aria-labelledby="headingTwo"
             data-parent="#accordionExample"
-            // style={mystyle}
+            style={mystyle}
           >
             <div className="card-body">
               Some placeholder content for the second accordion panel. This
@@ -82,7 +69,7 @@ export default function About(props) {
           </div>
         </div>
         <div className="card" >
-          <div className="card-header" id="headingThree">
+          <div className="card-header" id="headingThree" style={mystyle}>
             <h2 className="mb-0"> 
               <button
                 className="btn btn-link btn-block text-left collapsed"
@@ -91,7 +78,7 @@ export default function About(props) {
                 data-target="#collapseThree"
                 aria-expanded="false"
                 aria-controls="collapseThree"
-                // style={mystyle}
+                style={mystyle}
               >
                 Collapsible Group Item #3
               </button>
@@ -102,7 +89,7 @@ export default function About(props) {
             className="collapse"
             aria-labelledby="headingThree"
             data-parent="#accordionExample"
-            // style={mystyle}
+            style={mystyle}
           >
             <div className="card-body">
               And lastly, the placeholder content for the third and final
